@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fashion Light System, sistema web académico para la gestión de inventario y ventas del almacén Fashion Light.">
+    <title>Fashion Light System | Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <a class="marca" href="index.html" aria-label="Ir al inicio de Fashion Light System">
+            <img src="img/fashion_light_logo_sin_fondo.png" alt="Logo de Fashion Light System">
+            <span>Fashion Light System</span>
+        </a>
+
+        <button
+            class="boton-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            Menú
+        </button>
+
+        <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+            <a class="activo" href="index.html">Inicio</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="inventario.php">Inventario</a>
+            <a href="venta.php">Registrar venta</a>
+            <a href="listar_ventas.php">Historial de ventas</a>
+            <a href="documentacion.html">Documentación</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="titulo-principal">
+
+            <div>
+                <p class="etiqueta">Proyecto académico SENA · 2026</p>
+
+                <h1 id="titulo-principal">
+                    Fashion Light System
+                </h1>
+
+                <p>
+                    Sistema web básico para la gestión del inventario y las ventas
+                    del almacén Fashion Light. La aplicación permite consultar
+                    productos, controlar existencias, registrar ventas y revisar
+                    el historial de operaciones.
+                </p>
+
+                <div class="grupo-botones">
+                    <a class="boton principal" href="inventario.php">
+                        Consultar inventario
+                    </a>
+
+                    <a class="boton exito" href="venta.php">
+                        Registrar una venta
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-imagen">
+                <img class="logo-hero" src="img/fashion_light_logo_sin_fondo.png" alt="Logo de Fashion Light System">
+            </div>
+
+        </section>
+
+
+        <section class="seccion" aria-labelledby="titulo-accesos">
+
+            <div class="cabecera-pagina">
+                <p class="etiqueta">Acceso rápido</p>
+
+                <h2 id="titulo-accesos">
+                    Módulos principales
+                </h2>
+
+                <p>
+                    Seleccione una de las opciones para acceder directamente
+                    a las funciones disponibles del sistema.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="icono-card" aria-hidden="true">I</div>
+
+                    <h3>Inventario</h3>
+
+                    <p>
+                        Consulte el catálogo de prendas y revise información
+                        como nombre, marca, talla, color, precio y cantidad
+                        disponible.
+                    </p>
+
+                    <a class="boton principal" href="inventario.php">
+                        Ver inventario
+                    </a>
+                </article>
+
+
+                <article class="card">
+                    <div class="icono-card" aria-hidden="true">V</div>
+
+                    <h3>Registrar venta</h3>
+
+                    <p>
+                        Seleccione un producto, indique la cantidad y registre
+                        los datos básicos del cliente. El sistema calcula
+                        automáticamente el valor de la operación.
+                    </p>
+
+                    <a class="boton exito" href="venta.php">
+                        Registrar venta
+                    </a>
+                </article>
+
+
+                <article class="card">
+                    <div class="icono-card" aria-hidden="true">H</div>
+
+                    <h3>Historial de ventas</h3>
+
+                    <p>
+                        Consulte las ventas almacenadas en la base de datos,
+                        incluyendo el identificador, la fecha y el total
+                        de cada operación.
+                    </p>
+
+                    <a class="boton principal" href="listar_ventas.php">
+                        Ver historial
+                    </a>
+                </article>
+
+
+                <article class="card">
+                    <div class="icono-card" aria-hidden="true">T</div>
+
+                    <h3>Tutorial</h3>
+
+                    <p>
+                        Aprenda los conceptos básicos para gestionar el
+                        inventario y las ventas de una tienda de ropa mediante
+                        un sistema web.
+                    </p>
+
+                    <a class="boton secundario" href="tutorial.html">
+                        Ver tutorial
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion" aria-labelledby="titulo-proposito">
+
+            <h2 id="titulo-proposito">
+                Propósito del sistema
+            </h2>
+
+            <p>
+                Fashion Light System busca apoyar la digitalización de las
+                operaciones básicas del almacén Fashion Light. El sistema
+                centraliza la información de los productos y las ventas,
+                facilitando el control de las existencias y reduciendo la
+                dependencia de registros manuales.
+            </p>
+
+            <br>
+
+            <p>
+                La solución está planteada como una aplicación web académica
+                desarrollada con HTML, CSS, JavaScript, PHP y MySQL, ejecutada
+                localmente mediante XAMPP.
+            </p>
+
+        </section>
+
+
+        <section class="nota" aria-label="Información académica">
+
+            <strong>Información del proyecto:</strong>
+
+            <p>
+                Aprendiz: Juan Sebastián Caicedo Céspedes ·
+                Instructor: Herik Leonardo Cáceres Cáceres ·
+                Programa: Análisis y Desarrollo de Sistemas de Información
+                — Ficha ADSO 3186678.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="pie-pagina">
+
+        <p>
+            <strong>Fashion Light System</strong> — Proyecto académico SENA 2026
+        </p>
+
+        <p>
+            Sistema web para la gestión de inventario y ventas del almacén
+            Fashion Light.
+        </p>
+
+    </footer>
+
+
+    <script src="js/funciones.js"></script>
+
+</body>
+</html>

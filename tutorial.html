@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial paso a paso para gestionar productos, inventario y ventas en Fashion Light System.">
+    <title>Fashion Light System | Tutorial de uso</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="index.html" class="marca">
+            <img src="img/fashion_light_logo_sin_fondo.png" alt="Logo de Fashion Light System">
+            <span>Fashion Light System</span>
+        </a>
+
+        <button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+
+        <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="inventario.php">Inventario</a>
+            <a href="venta.php">Registrar venta</a>
+            <a href="listar_ventas.php">Historial de ventas</a>
+            <a href="tutorial.html" class="activo">Tutorial</a>
+            <a href="documentacion.html">Documentación</a>
+        </nav>
+    </header>
+
+    <main id="inicio" class="contenedor-documento">
+        <header class="cabecera-pagina">
+            <p class="etiqueta">Evidencia EV01</p>
+            <h1>Tutorial para gestionar Fashion Light System</h1>
+            <p>
+                Aprende a consultar el inventario, registrar prendas con imagen,
+                controlar existencias, registrar ventas y revisar el historial de operaciones.
+            </p>
+        </header>
+
+        <nav class="indice-tutorial" aria-labelledby="titulo-indice">
+            <h2 id="titulo-indice">Contenido del tutorial</h2>
+            <ol>
+                <li><a href="#consultar">Consultar el inventario</a></li>
+                <li><a href="#registrar">Registrar una prenda con imagen</a></li>
+                <li><a href="#filtrar">Filtrar y revisar existencias</a></li>
+                <li><a href="#venta">Registrar una venta</a></li>
+                <li><a href="#confirmar">Confirmar y guardar la operación</a></li>
+                <li><a href="#historial">Consultar el historial de ventas</a></li>
+            </ol>
+        </nav>
+
+        <section id="consultar" class="tema-tutorial">
+            <div class="numero-tema">1</div>
+            <div class="texto-tema">
+                <h2>Consultar el inventario</h2>
+                <p>Abra <strong>Inventario</strong> desde el menú principal. Allí se muestran las prendas registradas junto con su imagen, nombre, marca, talla, color, precio y stock disponible.</p>
+                <p>Esta vista permite conocer rápidamente qué productos están disponibles antes de atender una venta o registrar una nueva prenda.</p>
+                <a class="boton secundario" href="inventario.php">Abrir inventario</a>
+                <a class="enlace-volver" href="#inicio">↑ Volver al contenido</a>
+            </div>
+            <img src="img/Camiseta basica.jpg" alt="Camiseta básica mostrada en el inventario">
+        </section>
+
+        <section id="registrar" class="tema-tutorial">
+            <div class="numero-tema">2</div>
+            <div class="texto-tema">
+                <h2>Registrar una prenda con imagen</h2>
+                <p>En la página de inventario encontrará el formulario <strong>Registrar producto</strong>. Complete nombre, marca, talla, color, precio y stock. El campo de imagen permite adjuntar una fotografía en formato JPG, PNG o WEBP de máximo 5 MB.</p>
+                <p>Después de seleccionar <strong>Guardar producto</strong>, el sistema valida los datos, almacena la imagen y agrega la prenda al inventario. Para modificar una prenda existente, seleccione <strong>Editar</strong>, ajuste sus datos y presione <strong>Actualizar producto</strong>.</p>
+                <p>La opción <strong>Eliminar</strong> solicita confirmación. Un producto relacionado con una venta no puede eliminarse, porque el historial debe conservar sus referencias.</p>
+                <a class="boton secundario" href="inventario.php">Registrar producto</a>
+                <a class="enlace-volver" href="#inicio">↑ Volver al contenido</a>
+            </div>
+            <div class="mini-formulario" aria-label="Ejemplo de campos para registrar un producto">
+                <span>Nombre: Blusa casual</span>
+                <span>Marca: Moda Viva</span>
+                <span>Talla y color</span>
+                <span>Precio y stock</span>
+                <span>Imagen del producto</span>
+            </div>
+        </section>
+
+        <section id="filtrar" class="tema-tutorial">
+            <div class="numero-tema">3</div>
+            <div class="texto-tema">
+                <h2>Filtrar y revisar existencias</h2>
+                <p>Use el selector <strong>Filtrar por talla</strong> para mostrar únicamente prendas XS, S, M, L o XL. Seleccione “Todas las tallas” para regresar al catálogo completo.</p>
+                <p>Revise la columna <strong>Stock</strong>: las existencias bajas se identifican visualmente para apoyar la decisión de reposición. El stock también se verifica antes de guardar una venta.</p>
+                <a class="boton secundario" href="inventario.php">Revisar existencias</a>
+                <a class="enlace-volver" href="#inicio">↑ Volver al contenido</a>
+            </div>
+            <img src="img/Jean clásico.jpg" alt="Jean clásico disponible en el inventario">
+        </section>
+
+        <section id="venta" class="tema-tutorial">
+            <div class="numero-tema">4</div>
+            <div class="texto-tema">
+                <h2>Registrar una venta</h2>
+                <p>Entre en <strong>Registrar venta</strong> y seleccione una prenda disponible. El listado muestra marca, talla, color y stock para ayudarle a elegir correctamente.</p>
+                <p>Indique una cantidad mayor que cero y complete el nombre y documento del cliente. Si el producto tiene una imagen registrada, esta aparece como referencia durante el registro.</p>
+                <a class="boton secundario" href="venta.php">Registrar venta</a>
+                <a class="enlace-volver" href="#inicio">↑ Volver al contenido</a>
+            </div>
+            <img src="img/Chaqueta deportiva.jpg" alt="Chaqueta deportiva seleccionada para una venta">
+        </section>
+
+        <section id="confirmar" class="tema-tutorial">
+            <div class="numero-tema">5</div>
+            <div class="texto-tema">
+                <h2>Confirmar y guardar la operación</h2>
+                <p>El subtotal se calcula automáticamente con la fórmula:</p>
+                <p class="formula">Subtotal = precio × cantidad</p>
+                <p>Revise el producto, la cantidad, los datos del cliente y el valor mostrado. Al enviar el formulario, confirme la operación. PHP valida nuevamente el producto y el stock antes de registrar la venta y descontar las unidades disponibles.</p>
+                <a class="boton secundario" href="venta.php">Ir al formulario de venta</a>
+                <a class="enlace-volver" href="#inicio">↑ Volver al contenido</a>
+            </div>
+            <div class="mensaje-ejemplo" role="img" aria-label="Ejemplo de operación validada">
+                <strong>Venta lista para confirmar</strong>
+                <span>Producto, cantidad y subtotal verificados.</span>
+            </div>
+        </section>
+
+        <section id="historial" class="tema-tutorial">
+            <div class="numero-tema">6</div>
+            <div class="texto-tema">
+                <h2>Consultar el historial de ventas</h2>
+                <p>Abra <strong>Historial de ventas</strong> para consultar las operaciones almacenadas. Allí puede revisar el identificador, la fecha, el usuario y el total de cada venta registrada.</p>
+                <p>Esta consulta sirve para hacer seguimiento a las operaciones de la tienda y comprobar que los registros fueron guardados correctamente.</p>
+                <a class="boton secundario" href="listar_ventas.php">Ver historial</a>
+                <a class="enlace-volver" href="#inicio">↑ Volver al contenido</a>
+            </div>
+            <img src="img/Vestido floral.jpg" alt="Vestido floral del catálogo de Fashion Light System">
+        </section>
+
+        <aside class="nota">
+            <strong>Recomendación:</strong> revise siempre el stock y el subtotal antes de confirmar una venta. Las imágenes ayudan a identificar la prenda, pero los datos definitivos se validan en el servidor.
+        </aside>
+
+        <section class="cierre-tutorial">
+            <h2>Conclusión</h2>
+            <p>Fashion Light System reúne en un mismo flujo el registro de productos, la consulta del inventario, el control de existencias, el registro de ventas y el seguimiento de operaciones. Estas funciones permiten trabajar con información más organizada y reducir errores en la gestión diaria de la tienda.</p>
+            <a href="index.html" class="boton principal">Volver al inicio</a>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p><strong>Fashion Light System</strong> · Tutorial de uso del sistema</p>
+            <a href="#inicio">Volver al inicio</a>
+        </div>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documento de componentes frontend de Fashion Light System.">
+    <title>Documentación - Fashion Light System</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado no-imprimir">
+        <a href="index.html" class="marca"><img src="img/fashion_light_logo_sin_fondo.png" alt="Logo de Fashion Light System"><span>Fashion Light System</span></a>
+
+        <button
+            class="boton-menu"
+            id="boton-menu"
+            type="button"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            Menú
+        </button>
+
+        <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="inventario.php">Inventario</a>
+            <a href="venta.php">Registrar venta</a>
+            <a href="listar_ventas.php">Historial de ventas</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="documentacion.html" class="activo">Documentación</a>
+        </nav>
+    </header>
+
+    <main class="documento-componentes">
+
+        <section class="portada-documento">
+            <div class="logos-portada">
+                <img
+                    class="logo-proyecto"
+                    src="img/fashion_light_logo_sin_fondo.png"
+                    alt="Logotipo de Fashion Light System">
+            </div>
+            <p>Servicio Nacional de Aprendizaje - SENA</p>
+            <h1>Documento de componentes frontend</h1>
+            <h2>Proyecto: sistema de gestión de inventario y ventas Fashion Light System</h2>
+            <div class="datos-portada">
+                <p><strong>Aprendiz:</strong> Juan Sebastián Caicedo Céspedes</p>
+                <p><strong>Instructor:</strong> Herik Leonardo Cáceres Cáceres</p>
+                <p><strong>Programa:</strong> Análisis y Desarrollo de Sistemas de Información</p>
+                <p><strong>Ficha:</strong> ADSO 3186678</p>
+                <p><strong>Fecha:</strong> Septiembre de 2026</p>
+            </div>
+        </section>
+
+        <div class="contenido-documento">
+
+            <section class="seccion-documentacion" id="introduccion">
+                <span class="numero-documentacion">01</span>
+                <h2>Introducción</h2>
+
+                <p>
+                    Fashion Light System es una propuesta de sistema web orientada
+                    a apoyar la administración de una tienda de ropa. El proyecto
+                    busca centralizar información relacionada con los productos,
+                    el inventario y las ventas, reduciendo la dependencia de
+                    registros manuales.
+                </p>
+
+                <p>
+                    Desde el frontend se proporciona una interfaz organizada para
+                    que el usuario pueda consultar el inventario, revisar las
+                    características de las prendas, registrar ventas y consultar
+                    el historial de operaciones.
+                </p>
+
+                <p>
+                    La implementación utiliza HTML para la estructura de las
+                    páginas, CSS para la presentación visual y JavaScript para
+                    incorporar comportamientos interactivos y validaciones del
+                    lado del cliente.
+                </p>
+            </section>
+
+            <section class="seccion-documentacion" id="objetivo">
+                <span class="numero-documentacion">02</span>
+                <h2>Objetivo</h2>
+
+                <p>
+                    Desarrollar una interfaz web funcional, organizada y usable
+                    para apoyar la gestión de productos, inventario y ventas de
+                    una tienda de ropa mediante Fashion Light System.
+                </p>
+
+                <p>
+                    El frontend busca facilitar la interacción del usuario con
+                    las diferentes funcionalidades del sistema, presentando la
+                    información de forma clara y proporcionando mecanismos de
+                    navegación y validación adecuados.
+                </p>
+            </section>
+
+            <section class="seccion-documentacion" id="alcance">
+                <span class="numero-documentacion">03</span>
+                <h2>Alcance del proyecto</h2>
+
+                <p>
+                    El proyecto contempla una interfaz para consultar y gestionar
+                    información relacionada con prendas de vestir y operaciones
+                    de venta.
+                </p>
+
+                <ul class="lista-documentacion">
+                    <li>Visualización del panel principal.</li>
+                    <li>Consulta de productos del inventario.</li>
+                    <li>Filtrado de productos por talla.</li>
+                    <li>Registro, edición y eliminación de productos con carga opcional de imagen.</li>
+                    <li>Registro de ventas.</li>
+                    <li>Consulta del historial de ventas.</li>
+                    <li>Visualización de un tutorial de uso.</li>
+                    <li>Documentación de los componentes frontend.</li>
+                    <li>Integración con PHP y MySQL para las operaciones de datos.</li>
+                </ul>
+
+                <p>
+                    La solución está planteada como un proyecto académico y
+                    puede ampliarse posteriormente con autenticación, reportes
+                    más avanzados, gestión completa de usuarios y otras
+                    funcionalidades administrativas.
+                </p>
+            </section>
+
+            <section class="seccion-documentacion" id="navegacion">
+                <span class="numero-documentacion">04</span>
+                <h2>Estructura de navegación</h2>
+
+                <p>
+                    La navegación del sistema se organiza mediante un menú
+                    principal común a las páginas. Esta estructura permite
+                    acceder de manera directa a las funcionalidades principales.
+                </p>
+
+                <div class="contenedor-tabla">
+                    <table class="tabla-datos">
+                        <caption>
+                            Estructura de navegación de Fashion Light System
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Página</th>
+                                <th scope="col">Archivo</th>
+                                <th scope="col">Función</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Inicio</td>
+                                <td>index.html</td>
+                                <td>Presenta el sistema y sus módulos principales.</td>
+                            </tr>
+                            <tr>
+                                <td>Inventario</td>
+                                <td>inventario.php</td>
+                                <td>Permite consultar productos y filtrar por talla.</td>
+                            </tr>
+                            <tr>
+                                <td>Registrar venta</td>
+                                <td>venta.php</td>
+                                <td>Permite diligenciar los datos de una venta.</td>
+                            </tr>
+                            <tr>
+                                <td>Historial de ventas</td>
+                                <td>listar_ventas.php</td>
+                                <td>Consulta las ventas almacenadas.</td>
+                            </tr>
+                            <tr>
+                                <td>Tutorial</td>
+                                <td>tutorial.html</td>
+                                <td>Explica la gestión del inventario y las ventas.</td>
+                            </tr>
+                            <tr>
+                                <td>Documentación</td>
+                                <td>documentacion.html</td>
+                                <td>Describe los componentes del proyecto.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="seccion-documentacion" id="html">
+                <span class="numero-documentacion">05</span>
+                <h2>Elementos HTML definidos</h2>
+
+                <p>
+                    HTML proporciona la estructura semántica de las diferentes
+                    vistas del sistema. Se emplean elementos adecuados según
+                    el tipo de contenido que se presenta.
+                </p>
+
+                <div class="contenedor-tabla">
+                    <table class="tabla-datos">
+                        <caption>
+                            Principales elementos HTML utilizados
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Elemento</th>
+                                <th scope="col">Uso en el proyecto</th>
+                                <th scope="col">Página relacionada</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>&lt;header&gt;</td>
+                                <td>Contiene la identidad y navegación principal.</td>
+                                <td>Todas las páginas</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;nav&gt;</td>
+                                <td>Organiza los enlaces de navegación.</td>
+                                <td>Todas las páginas</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;main&gt;</td>
+                                <td>Contiene el contenido principal de cada vista.</td>
+                                <td>Todas las páginas</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;section&gt;</td>
+                                <td>Divide el contenido en bloques temáticos.</td>
+                                <td>Tutorial y documentación</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;table&gt;</td>
+                                <td>Presenta información de inventario y ventas.</td>
+                                <td>Inventario e historial</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;form&gt;</td>
+                                <td>Permite capturar datos de productos y ventas.</td>
+                                <td>Inventario y registrar venta</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="file"&gt;</td>
+                                <td>Permite seleccionar la imagen de un producto.</td>
+                                <td>Inventario</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;label&gt;</td>
+                                <td>Identifica los campos de entrada.</td>
+                                <td>Registrar venta</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;select&gt;</td>
+                                <td>Permite seleccionar productos o filtros.</td>
+                                <td>Inventario y venta</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;button&gt;</td>
+                                <td>Ejecuta acciones del usuario.</td>
+                                <td>Inventario y formularios</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;footer&gt;</td>
+                                <td>Presenta la información institucional del proyecto.</td>
+                                <td>Todas las páginas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="seccion-documentacion" id="css">
+                <span class="numero-documentacion">06</span>
+                <h2>Componentes CSS</h2>
+
+                <p>
+                    La presentación visual se centraliza en el archivo
+                    <strong>css/estilos.css</strong>. Se utiliza una paleta de
+                    colores definida mediante variables CSS para mantener
+                    consistencia en todo el sistema.
+                </p>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Variables de color</h3>
+                        <p>
+                            Se definen los colores institucionales y funcionales
+                            mediante propiedades personalizadas dentro de
+                            <code>:root</code>.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Diseño responsive</h3>
+                        <p>
+                            Las reglas media query permiten adaptar la interfaz
+                            a diferentes tamaños de pantalla.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>CSS Grid y Flexbox</h3>
+                        <p>
+                            Se utilizan para organizar tarjetas, navegación,
+                            formularios, tablas y diferentes bloques de contenido.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Componentes reutilizables</h3>
+                        <p>
+                            Botones, tarjetas, tablas, formularios, encabezados
+                            y mensajes utilizan clases reutilizables.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="paleta-documentacion">
+                    <h3>Paleta definida</h3>
+
+                    <div class="paleta-lista">
+                        <span class="muestra-color azul">#1E3A8A</span>
+                        <span class="muestra-color verde">#10B981</span>
+                        <span class="muestra-color rojo">#EF4444</span>
+                        <span class="muestra-color gris">#F3F4F6</span>
+                        <span class="muestra-color oscuro">#1F2937</span>
+                        <span class="muestra-color blanco">#FFFFFF</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-documentacion" id="javascript">
+                <span class="numero-documentacion">07</span>
+                <h2>Funcionalidades JavaScript</h2>
+
+                <p>
+                    El archivo <strong>js/funciones.js</strong> concentra las
+                    funcionalidades interactivas del frontend. El código se
+                    mantiene separado del HTML para facilitar el mantenimiento
+                    y reutilización.
+                </p>
+
+                <ul class="lista-documentacion">
+                    <li>
+                        Apertura y cierre del menú responsive mediante el botón
+                        de navegación.
+                    </li>
+                    <li>
+                        Filtrado de los productos del inventario por talla.
+                    </li>
+                    <li>
+                        Cálculo automático del subtotal en el formulario de venta.
+                    </li>
+                    <li>
+                        Validación de campos requeridos antes de enviar una venta.
+                    </li>
+                    <li>
+                        Confirmación del usuario antes de registrar la operación.
+                    </li>
+                    <li>
+                        Formateo de valores monetarios para mejorar la lectura.
+                    </li>
+                    <li>
+                        Marcación visual de campos que presentan errores.
+                    </li>
+                    <li>
+                        Actualización de la imagen del producto seleccionado en el formulario de venta.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="seccion-documentacion" id="usabilidad">
+                <span class="numero-documentacion">08</span>
+                <h2>Principios de usabilidad y accesibilidad</h2>
+
+                <p>
+                    La interfaz busca facilitar el uso del sistema mediante una
+                    distribución visual clara, navegación consistente y
+                    retroalimentación al usuario.
+                </p>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Claridad</h3>
+                        <p>
+                            Los títulos y etiquetas describen de forma directa
+                            la finalidad de cada sección y campo.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Consistencia</h3>
+                        <p>
+                            El encabezado, menú, botones y pie de página mantienen
+                            una estructura común entre las páginas.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Prevención de errores</h3>
+                        <p>
+                            Los formularios incluyen validaciones y confirmación
+                            antes de completar operaciones importantes.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Accesibilidad</h3>
+                        <p>
+                            Se emplean etiquetas asociadas a controles, atributos
+                            ARIA cuando son necesarios, textos alternativos en
+                            imágenes y estructura semántica.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Diseño adaptable</h3>
+                        <p>
+                            La interfaz se adapta a dispositivos de escritorio,
+                            tabletas y teléfonos mediante diseño responsive.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Legibilidad</h3>
+                        <p>
+                            Se mantiene contraste visual, jerarquía de títulos
+                            y espacios adecuados para facilitar la lectura.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="seccion-documentacion" id="backend">
+                <span class="numero-documentacion">09</span>
+                <h2>Relación con backend</h2>
+
+                <p>
+                    Aunque este documento se concentra en los componentes
+                    frontend, Fashion Light System integra PHP y MySQL para
+                    gestionar la información persistente del sistema.
+                </p>
+
+                <p>
+                    El formulario de registro de ventas utiliza
+                    <strong>venta.php</strong> para presentar los productos
+                    disponibles y recopilar los datos de la operación.
+                    Posteriormente, <strong>guardar_venta.php</strong> procesa
+                    la información enviada mediante POST.
+                </p>
+
+                <p>
+                    La conexión con la base de datos se centraliza en
+                    <strong>conexion.php</strong>. El backend consulta el precio
+                    real del producto, calcula el total, registra la venta y
+                    actualiza el stock correspondiente. El formulario de
+                    inventario envía los datos mediante multipart/form-data a
+                    <strong>guardar_producto.php</strong>, que valida la imagen,
+                    la almacena en la carpeta <strong>img</strong> y registra su
+                    ruta en la tabla de productos.
+                </p>
+
+                <p>
+                    De esta manera, el frontend facilita la interacción del
+                    usuario mientras que PHP y MySQL se encargan del procesamiento
+                    y almacenamiento de la información.
+                </p>
+            </section>
+
+            <section class="seccion-documentacion" id="conclusion">
+                <span class="numero-documentacion">10</span>
+                <h2>Conclusión</h2>
+
+                <p>
+                    Fashion Light System integra diferentes componentes frontend
+                    para proporcionar una interfaz organizada y orientada a la
+                    gestión de una tienda de ropa.
+                </p>
+
+                <p>
+                    La utilización conjunta de HTML, CSS y JavaScript permite
+                    construir páginas estructuradas, adaptables e interactivas.
+                    Además, la integración con PHP y MySQL permite conectar la
+                    interfaz con las operaciones de persistencia de datos.
+                </p>
+
+                <p>
+                    El resultado constituye una base funcional para continuar
+                    ampliando el sistema con nuevas características administrativas
+                    y de gestión, manteniendo como principios la claridad,
+                    usabilidad, accesibilidad y organización de la información.
+                </p>
+            </section>
+
+            <section class="firma-documentacion">
+                <p>
+                    <strong>Fashion Light System</strong>
+                </p>
+                <p>Proyecto académico SENA 2026</p>
+                <p>ADSO — Ficha 3186678</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina no-imprimir">
+        <div class="contenedor">
+            <p>Fashion Light System — Proyecto académico SENA 2026</p>
+            <button class="boton secundario" type="button" onclick="window.print()">
+                Imprimir o guardar como PDF
+            </button>
+        </div>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>
